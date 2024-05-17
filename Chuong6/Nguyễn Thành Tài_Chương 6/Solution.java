@@ -33,7 +33,7 @@ public class Solution {
              System.out.printf("Case #%d:\n",t+1);
              System.out.printf("Sum: %.02f\n",Practice.sum(arr));
              System.out.printf("Min: %.02f\n",Practice.getMin(arr));
-             System.out.printf("Max : %.02f\n",Practice.getMax(arr));
+             System.out.printf("Max: %.02f\n",Practice.getMax(arr));
              System.out.println("To upper: " + Practice.toUpper(str1));
              System.out.println("To lower: " + Practice.toLower(str2));
              System.out.println("To upper first char: " + Practice.toUpperFirstChar(str1) + " - "+Practice.toUpperFirstChar(str2));
