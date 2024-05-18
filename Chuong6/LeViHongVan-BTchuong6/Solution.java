@@ -38,6 +38,7 @@ public class Solution {
             str2 = Practice.toLower(str2);
             System.out.println("To upper first char: "+Practice.toUpperFirstChar(str1)+" - "+Practice.toUpperFirstChar(str2));
             System.out.printf("Fibonacci(%d): %d",k,Practice.getFibonacci(k));
+            System.out.println("");
         }
     }
 }
