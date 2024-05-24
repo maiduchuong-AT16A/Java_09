@@ -60,13 +60,13 @@ public class Solution {
             System.out.println(C[q].toString());
             double hieuR = Math.abs(C[i].getR()-C[j].getR());
             double tongR = C[i].getR()+C[j].getR();
-            double d = C[i].getI().getDistance(C[j].getI());
-            if (hieuR<d && d<tongR)
-                System.out.printf("Circle %d intersects with Circle %d\n", i,j);
+            double d = C[i].getI().getDistance(C[j].getI());            
+            if (d<hieuR || d>tongR)
+                System.out.printf("Circle %d does not intersect Circle %d\n", i, j);
             else if (d<hieuR && C[i].getR()<C[j].getR())
                 System.out.printf("Circle %d is inside Circle %d\n", i, j);
-            else if (d<hieuR || d>tongR)
-                System.out.printf("Circle %d does not intersect Circle %d\n", i, j);
+            else
+                System.out.printf("Circle %d intersects with Circle %d\n", i,j);
         }
     }
 
