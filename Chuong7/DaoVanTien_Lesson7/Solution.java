@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package com.mycompany.DaoVanTien_Lesson7;
 
 import java.util.Scanner;
@@ -58,12 +55,12 @@ public class Solution {
             System.out.printf("distance = %.03f\n", pnt[k].getDistance(x1, y1));
             System.out.println(pnt[p].toString());
             System.out.println(C[q].toString());
-            double hieuR = Math.abs(C[i].getR()-C[j].getR());
+            double hieuR = C[i].getR()-C[j].getR();
             double tongR = C[i].getR()+C[j].getR();
             double d = C[i].getI().getDistance(C[j].getI());            
             if (d<hieuR || d>tongR)
                 System.out.printf("Circle %d does not intersect Circle %d\n", i, j);
-            else if (d<hieuR && C[i].getR()<C[j].getR())
+            else if (-d > hieuR)
                 System.out.printf("Circle %d is inside Circle %d\n", i, j);
             else
                 System.out.printf("Circle %d intersects with Circle %d\n", i,j);
