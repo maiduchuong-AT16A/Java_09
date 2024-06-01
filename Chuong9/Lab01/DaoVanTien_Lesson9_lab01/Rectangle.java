@@ -32,7 +32,7 @@ public class Rectangle implements IShape{
     @Override
     public void show() {
 //Rectangle(29.670000, 93.510000): perimeter = 246.360, area = 2774.442
-        System.out.printf("Rectangle (%f, %f): perimeter = %.03f, area = %.03f\n",
+        System.out.printf("Rectangle(%f, %f): perimeter = %.03f, area = %.03f\n",
                           length, width, getPerimeter(), getArea());
     }
     
