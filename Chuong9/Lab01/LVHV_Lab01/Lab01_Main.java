@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+ */s
 package Lab01;
 
 import java.io.FileInputStream;
@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Lab01_Main {
 
     public static void main(String[] args) {
-        //System.setIn(new FileInputStream("D:\\JavaCore\\input.txt"));
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
         for (int t = 1; t <= T; t++) {
