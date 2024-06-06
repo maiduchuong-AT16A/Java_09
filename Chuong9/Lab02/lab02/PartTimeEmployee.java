@@ -1,32 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package com.mycompany.lesson09.lab02;
 
-/**
- *
- * @author PC2
- */
-public class PartTimeEmployee extends Employee {
-    int workingHours;
+package leson09.lab02;
 
-    public PartTimeEmployee(int workingHours) {
-        this.workingHours = workingHours;
-    }
+public class PartTimeEmployee extends Employee{
+    int workingHour;
 
-    public PartTimeEmployee(String name, int paymentPerHour, int workingHours) {
+    public PartTimeEmployee(String name, int paymentPerHour, int workingHour) {
         super(name, paymentPerHour);
-        this.workingHours = workingHours;
-    }
-    @Override
-    public int calculateSalary(){
-        return getPaymentPerHour() * workingHours;
+        this.workingHour = workingHour;
     }
 
-    @Override
-    public void showInfor() {
-        System.out.printf("Part time employee:\nName: %s, salary per day: %d\n", getName(), calculateSalary());
+    public int getWorkingHour() {
+        return workingHour;
     }
-    
+
+    public void setWorkingHour(int workingHour) {
+        this.workingHour = workingHour;
+    }
+    public int calculateSalary()
+    {
+        return paymentPerHour * workingHour;
+    }
+    public void showInfo()
+    {
+        System.out.printf("Part time employee:\nName: %s, salary per day: %d\n", name,calculateSalary());
+    }
 }
