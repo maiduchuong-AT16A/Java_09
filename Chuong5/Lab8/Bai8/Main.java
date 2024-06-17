@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Bai8;
+package bai8;
 
 /**
  *
@@ -11,14 +11,12 @@ package Bai8;
 public class Main {
     public static void main(String[] args) {
         PhanSo ps = new PhanSo();
-        ps.inputInfo();
-        ps.ouput();
-        System.out.println();
+        ps.nhapphanso();
         ps.rutGon();
-        ps.ouput();
-        System.out.println();
-        ps.nghicDao();
-        ps.ouput();
-        
+        System.out.println("phan so rut gon la:");
+        ps.showPhanSo();
+        ps.nghichDaoPs();
+        System.out.println("phan so nghich dao la:");
+        ps.showPhanSo();
     }
 }

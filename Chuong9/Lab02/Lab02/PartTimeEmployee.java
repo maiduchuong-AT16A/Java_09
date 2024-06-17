@@ -1,52 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package lesson9;
 
-/**
- *
- * @author Admin
- */
+package leson09.lab02;
+
 public class PartTimeEmployee extends Employee{
-    private int workingHours;
+    int workingHour;
 
-    public PartTimeEmployee(String name,int paymentPerHour,int workingHours ) {
+    public PartTimeEmployee(String name, int paymentPerHour, int workingHour) {
         super(name, paymentPerHour);
-        this.workingHours = workingHours;
+        this.workingHour = workingHour;
     }
 
-    public PartTimeEmployee() {
-    }
-    
-
-    @Override
-    public void setName(String name) {
-        super.setName(name); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
-    
-
-    @Override
-    public int calculateSalary() {
-        return workingHours*super.getPaymentPerHour();
+    public int getWorkingHour() {
+        return workingHour;
     }
 
-    @Override
-    public void showInfor() {
-        System.out.print("Part time employee: \n");
-        super.showInfor(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    public void setWorkingHour(int workingHour) {
+        this.workingHour = workingHour;
     }
-
-    public void setWorkingHours(int workingHours) {
-        this.workingHours = workingHours;
+    public int calculateSalary()
+    {
+        return paymentPerHour * workingHour;
     }
-
-    @Override
-    public void setPaymentPerHour(int paymentPerHour) {
-        super.setPaymentPerHour(paymentPerHour); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
+    public void showInfo()
+    {
+        System.out.printf("Part time employee:\nName: %s, salary per day: %d\n", name,calculateSalary());
     }
-    
-    
-    
-    
 }
