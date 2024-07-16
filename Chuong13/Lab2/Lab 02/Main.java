@@ -4,16 +4,16 @@
  */
 package Leson13;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import Lab_02.AgeComparator;
+import Lab_02.FirstNameComparator;
+import Lab_02.GPAComparator;
+import Lab_02.LastNameComparator;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
-import javax.swing.text.DateFormatter;
+import javacore.sort.comperable.Student;
 
 /**
  *
