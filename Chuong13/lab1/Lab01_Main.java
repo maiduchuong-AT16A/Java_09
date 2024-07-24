@@ -1,109 +1,97 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package com.mycompany.bai2;
+package Lab_01;
 
-import static java.lang.constant.ConstantDescs.NULL;
-import java.util.LinkedList;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
  *
- * @author tuan anh
+ * @author DELL
  */
 public class Lab01_Main {
+
     static Scanner sc = new Scanner(System.in);
-    static LinkedList<Integer> list = new LinkedList<>();
-    static void case_1()
+    static ArrayList<Integer> dsach = new ArrayList<>();
+    
+    static void func01()
     {
-        char kitu = sc.next().charAt(0);
-        int X;
-        switch (kitu) {
-            case 'F':
-                X = sc.nextInt();
-                list.addFirst(X);
-                break;
-            case 'L':
-                X = sc.nextInt();
-                list.addLast(X);
-                break;
-            default:
-                int Y = sc.nextInt();
-                X = sc.nextInt();
-                if(Y<list.size()){
-                    list.add(Y,X);
-                }
+        char kiTu = sc.next().charAt(0);
+        switch (kiTu) {
+            case 'F' -> dsach.add(0, sc.nextInt());
+            case 'L' -> dsach.add(dsach.size(), sc.nextInt());
+            case 'P' -> {
+                int x,y;
+                y = sc.nextInt();
+                x = sc.nextInt();
+                if (y<dsach.size())
+                    dsach.add(y, x);
                 else
-                {
-                    list.add(X);
-                }
+                    dsach.add(x);
+            }
         }
     }
-    static void case_2()
+    
+    static void func02()
     {
-        int X = sc.nextInt();
-        for(int i=0; i<list.size(); i++) 
+        int count=0, x = sc.nextInt();
+        for (int i=0; i<dsach.size(); i++)
         {
-            if(list.get(i)==X)
-                list.remove(i);
-        }
-        System.out.println(X);
-    }
-    static void case_3()
-    {
-        int dem =0;
-        int X = sc.nextInt();
-        for(int i=0; i<list.size();i++)
-        {
-            if(list.get(i)==X)
+            if (dsach.get(i)==x)
             {
-                dem++;
+                dsach.remove(i);
+                count++;
             }
         }
-        System.out.println(dem);
+        System.out.println(count);
     }
-    static void case_4()
+    
+    static void func03()
     {
-        int X = sc.nextInt();
-        int Y = sc.nextInt();
-        for(int i=X;i<=Y;i++)
+        int count=0, x = sc.nextInt();
+        for (int i=0; i<dsach.size(); i++)
         {
-            System.out.printf("%d ", list.get(i));
+            if (dsach.get(i)==x)
+            {
+                count++;
+            }
         }
+        System.out.println(count);
     }
-    static void case_5()
+    
+    static void func04()
     {
-        for(int i=0;i<list.size();i++)
-        {
-            System.out.printf("%d ", list.get(i));
-        }
+        int x, y;
+        x = sc.nextInt();
+        y = sc.nextInt();
+        for (int i=x; i<=y; i++)
+            System.out.print(dsach.get(i)+" ");
+        System.out.println("");
     }
+    
+    static void func05()
+    {
+        for (int i=0; i<dsach.size(); i++)
+            System.out.printf(dsach.get(i)+" ");
+        System.out.println("");
+    }
+    
     public static void main(String[] args) {
-        int T = sc.nextInt();
-        int d;
-        for(int t=0; t<T; t++)
+        int n, N = sc.nextInt();
+        for (n=1; n<=N; n++)
         {
-            d = sc.nextInt();
-            switch (d) {
-                case 1:
-                    case_1();
-                    break;
-                case 2:
-                    case_2();
-                    break;
-                case 3:
-                    case_3();
-                    break;
-                case 4:
-                    case_4();
-                    System.out.println("");
-                    break;
-                case 5:
-                case_5();
-                    System.out.println("");
-                break;
+            short choice = sc.nextShort();
+            switch (choice)
+            {
+                case 1 -> func01();
+                case 2 -> func02();
+                case 3 -> func03();
+                case 4 -> func04();
+                case 5 -> func05();
             }
         }
     }
+    
 }
